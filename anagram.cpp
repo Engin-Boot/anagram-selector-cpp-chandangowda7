@@ -7,14 +7,13 @@ bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& wor
     int count1[NO_OF_CHARS] = { 0 }; 
     int count2[NO_OF_CHARS] = { 0 }; 
     int iterator; 
-    std::tranform(count1.begin(),count1.end(),count1.begin(),std::tolower);
-     std::tranform(count2.begin(),count2.end(),count2.begin(),std::tolower);
+   
    
     for (iterator = 0; word1[iterator] && word2[iterator]; iterator++) { 
         if(word1[iterator]!=' ')
-        count1[word1[iterator]]++; 
+        count1[tolower(word1[iterator])]++; 
         if(word2[iterator]!=' ')
-        count2[word2[iterator]]++; 
+        count2[tolower(word2[iterator])]++; 
     } 
   
     
