@@ -49,7 +49,7 @@ std::vector<std::string> Anagram::SelectAnagrams(
     //Fill the correct implementation here
     for(int iterator=0;iterator<candidates.size();iterator++)
     {
-        if(WordPairIsAnagram(word,candidates[iterator]))
+        if(Anagram::WordPairIsAnagram(word,candidates[iterator]))
            {
            anagrams[anagramcount]=candidates[iterator];
               anagramcount++;
