@@ -9,11 +9,11 @@ bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& wor
     int iterator; 
    
    
-    for (iterator = 0; word1[iterator]; iterator++) { 
+    for (iterator = 0; iterator<word1.length(); iterator++) { 
         if(word1[iterator]!=' ')
         count1[tolower(word1[iterator])]++; 
     }
-    for (iterator = 0; word1[iterator]; iterator++) {
+    for (iterator = 0; iterator<word2.length(); iterator++) {
         if(word2[iterator]!=' ')
         count2[tolower(word2[iterator])]++; 
     } 
