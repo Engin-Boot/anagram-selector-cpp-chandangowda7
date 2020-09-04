@@ -1,4 +1,5 @@
 #include "anagram.h"
+#include<algorithm>
 
 bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& word2) {
     //Fill the correct implementation here
@@ -22,7 +23,7 @@ std::vector<std::string> Anagram::SelectAnagrams(
     std::vector<std::string> anagrams;
     int anagramcount=0;
     //Fill the correct implementation here
-    for(int iterator=0;iterator<candidates.size();iiterator++)
+    for(int iterator=0;iterator<candidates.size();iterator++)
     {
         if(WordPairIsAnagram(word,candidates[iterator])
            {
