@@ -6,10 +6,10 @@ bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& wor
     int lenofword2=word2.length();
     if(lenofword1!=lenofword2)
         return false;
-    sort(word1.begin(),word1.end());
-    sort(word2.begin(),word2.end());
-    for(int i=0;i<lenofword1;i++)
-    {if(word1[i]!=word2[i])
+    std::sort(word1.begin(),word1.end());
+    std::sort(word2.begin(),word2.end());
+    for(int iterator=0;iterator<lenofword1;iterator++)
+    {if(word1[iterator]!=word2[iterator])
         return false;
     }
     return true;
@@ -19,6 +19,16 @@ bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& wor
 std::vector<std::string> Anagram::SelectAnagrams(
         const std::string& word,
         const std::vector<std::string>& candidates) {
+    std::vector<std::string> anagrams;
+    int anagramcount=0;
     //Fill the correct implementation here
-    return candidates;
+    for(int iterator=0;iterator<candidates.size();iiterator++)
+    {
+        if(WordPairIsAnagram(word,candidates[iterator])
+           {
+           anagrams[anagramcount]=candidates[iterator];
+               anagramcount++
+             }
+    }
+    return anagrams;
 }
