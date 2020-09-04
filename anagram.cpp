@@ -48,7 +48,7 @@ std::vector<std::string> Anagram::SelectAnagrams(
         if(WordPairIsAnagram(word,candidates[iterator]))
            {
            anagrams[anagramcount]=candidates[iterator];
-              anagramcount++
+              anagramcount++;
              }
     }
     return anagrams;
