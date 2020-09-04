@@ -1,9 +1,29 @@
 #include "anagram.h"
-#include<algorithm>
+#define NO_OF_CHARS 256 
 
 bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& word2) {
     //Fill the correct implementation here
-    int lenofword1=word1.length();
+    int count1[NO_OF_CHARS] = { 0 }; 
+    int count2[NO_OF_CHARS] = { 0 }; 
+    int iterator; 
+  
+   
+    for (iterator = 0; word1[iterator] && word2[iterator]; iterator++) { 
+        count1[word1[iterator]]++; 
+        count2[word2[iterator]]++; 
+    } 
+  
+    
+    if (word1[iterator] || word2[iterator]) 
+        return false; 
+  
+    
+    for (iterator = 0; iterator < NO_OF_CHARS; iterator++) 
+        if (count1[iterator] != count2[iterator]) 
+            return false; 
+  
+    return true;
+    /*int lenofword1=word1.length();
     int lenofword2=word2.length();
     if(lenofword1!=lenofword2)
         return false;
@@ -13,7 +33,7 @@ bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& wor
     {if(word1[iterator]!=word2[iterator])
         return false;
     }
-    return true;
+    return true;*/
 
 }
 
@@ -28,7 +48,7 @@ std::vector<std::string> Anagram::SelectAnagrams(
         if(WordPairIsAnagram(word,candidates[iterator])
            {
            anagrams[anagramcount]=candidates[iterator];
-               anagramcount++
+              anagramcount++
              }
     }
     return anagrams;
