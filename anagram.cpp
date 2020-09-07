@@ -33,7 +33,7 @@ bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& wor
 }
 int* Anagram:: allocateToarray(const std::string& word)
 {
-     int count=new int[NO_OF_CHARS]{0}; 
+     int* count=new int[NO_OF_CHARS]{0}; 
     for (int iterator = 0; iterator<word.length(); iterator++) { 
         if(word[iterator]!=' ')
         count[tolower(word[iterator])]++; 
