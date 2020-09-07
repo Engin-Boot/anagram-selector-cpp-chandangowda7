@@ -4,9 +4,9 @@
 
 bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& word2) {
     //Fill the correct implementation here
-    int* count1=allocateToarray(word1);
+    int* count1=Anagram::allocateToarray(word1);
     
-    int* count2=allocateToarray(word2); 
+    int* count2=Anagram::allocateToarray(word2); 
     int iterator; 
    
    
@@ -31,7 +31,7 @@ bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& wor
    
 
 }
-int* allocateToarray(const std::string& word)
+int* Anagram:: allocateToarray(const std::string& word)
 {
      int count[NO_OF_CHARS] = { 0 }; 
     for (int iterator = 0; iterator<word.length(); iterator++) { 
