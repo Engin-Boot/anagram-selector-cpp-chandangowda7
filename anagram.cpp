@@ -4,19 +4,20 @@
 
 bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& word2) {
     //Fill the correct implementation here
-    int count1[NO_OF_CHARS] = { 0 }; 
-    int count2[NO_OF_CHARS] = { 0 }; 
+    int* count1=allocateToarray(const std::string& word1);
+    
+    int* count2=allocateToarray(const std::string& word2); 
     int iterator; 
    
    
-    for (iterator = 0; iterator<word1.length(); iterator++) { 
+   /* for (iterator = 0; iterator<word1.length(); iterator++) { 
         if(word1[iterator]!=' ')
         count1[tolower(word1[iterator])]++; 
     }
     for (iterator = 0; iterator<word2.length(); iterator++) {
         if(word2[iterator]!=' ')
         count2[tolower(word2[iterator])]++; 
-    } 
+    } */
   
     
     
@@ -27,18 +28,18 @@ bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& wor
             return false; 
   
     return true;
-    /*int lenofword1=word1.length();
-    int lenofword2=word2.length();
-    if(lenofword1!=lenofword2)
-        return false;
-    std::sort(word1.begin(),word1.end());
-    std::sort(word2.begin(),word2.end());
-    for(int iterator=0;iterator<lenofword1;iterator++)
-    {if(word1[iterator]!=word2[iterator])
-        return false;
-    }
-    return true;*/
+   
 
+}
+int* allocateToarray(const std::string& word)
+{
+     int count[NO_OF_CHARS] = { 0 }; 
+    for (int iterator = 0; iterator<word.length(); iterator++) { 
+        if(word[iterator]!=' ')
+        count[tolower(word1[iterator])]++; 
+    }
+    return count;
+    
 }
 
 std::vector<std::string> Anagram::SelectAnagrams(
