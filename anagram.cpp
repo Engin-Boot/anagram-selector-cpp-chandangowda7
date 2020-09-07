@@ -45,7 +45,7 @@ std::vector<std::string> Anagram::SelectAnagrams(
         const std::string& word,
         const std::vector<std::string>& candidates) {
     std::vector<std::string> anagrams;
-    int anagramcount=0;
+    /*int anagramcount=0;
     //Fill the correct implementation here
     for(int iterator=0;iterator<candidates.size();iterator++)
     {
@@ -54,6 +54,6 @@ std::vector<std::string> Anagram::SelectAnagrams(
            anagrams[anagramcount]=candidates[iterator];
               anagramcount++;
              }
-    }
+    }*/
     return anagrams;
 }
