@@ -45,14 +45,15 @@ std::vector<std::string> Anagram::SelectAnagrams(
         const std::string& word,
         const std::vector<std::string>& candidates) {
     std::vector<std::string> anagrams;
-    int anagramcount=0;int iterator;
+    //int anagramcount=0;
+    int iterator;
     //Fill the correct implementation here
     for(iterator=0;iterator<candidates.size();iterator++)
     {
         if(Anagram::WordPairIsAnagram(word,candidates[iterator]))
            {
-           anagrams[anagramcount]=candidates[iterator];
-              anagramcount++;
+           anagrams.push_back(candidates[iterator]);
+             // anagramcount++;
              }
     }
     return anagrams;
