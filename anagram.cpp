@@ -4,9 +4,9 @@
 
 bool Anagram::WordPairIsAnagram(const std::string& word1, const std::string& word2) {
     //Fill the correct implementation here
-    int* count1=allocateToarray(const std::string& word1);
+    int* count1=allocateToarray(word1);
     
-    int* count2=allocateToarray(const std::string& word2); 
+    int* count2=allocateToarray(word2); 
     int iterator; 
    
    
@@ -36,7 +36,7 @@ int* allocateToarray(const std::string& word)
      int count[NO_OF_CHARS] = { 0 }; 
     for (int iterator = 0; iterator<word.length(); iterator++) { 
         if(word[iterator]!=' ')
-        count[tolower(word1[iterator])]++; 
+        count[tolower(word[iterator])]++; 
     }
     return count;
     
